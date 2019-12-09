@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset = 'utf-8'>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+	body {
+		font-family: fantasy, cursive, serif;
+		margin: 1;
+		background-color:#CD5C5C;
+		}
+	        /* Style the header */
+	        .header {
+			padding: 95px;
+			text-align: center;
+			color: purple;
+												        }
+	</style>
+	</head>
+	<h1><center>Sighting Stats</center></h1>
+{% block content %}
+<form  method='GET'>
+
+<style>
+table,table tr th, table tr td { border:2px solid white; }
+table { width: 900px; min-height: 50px; line-height: 50px; text-align: center; border-collapse: collapse;}
+table th {
+	background-color: #F5DEB3;
+	}
+table td {
+	background-color:#F5F5DC;
+	}
+</style>
+
+<table align='center' style='width:50%'>
+	<tr>
+		<th>Number of Squirrels</th>
+		<th>Number of Juvenile Age Squirrels</th>
+		<th>Number of Squirrels with Gray Fur</th>
+		<th>Number of Squirrels on the Ground</th>
+		<th>Number of Squirrels Running</th>
+	</tr>
+	<tr>
+	<td>{{ num_of_sightings }}</td>
+	<td>{{ juvenile_age }}</td>
+	<td>{{ gray_fur }}</td>
+	<td>{{ ground_plane_location }}</td>
+	<td>{{ running }}</td>
+	</tr>
+	</center></table>
+</form>
+<a href='/sightings1/' class=''><center><button type='button' class='button'>Back to the list page</button></center></a>
+{% endblock %}
+</html>

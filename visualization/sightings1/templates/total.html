@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+	<head>
+		<title>2018 Central Park Squirrel Census</title>
+		<h1><center>Squirrel List</center></h1>
+		<style type="text/css">
+  	h1 {	color:#CD5C5C;
+		font-size:50pt;
+		font-family:serif;}
+	button {    color:white;
+                font-size:16pt;
+                font-family:fantasy;
+		background-color:#CD5C5C;
+		width: 500px;
+		}
+	body {  color: white;
+                font-size:16pt;
+                font-family:fantasy;
+                /*background-color:#F5F5DC;*/
+		background-image: linear-gradient(to bottom right,#F5F5DC, #CD5C5C);
+	}
+	ul{columns: 4;
+	}
+	</style>
+	
+	</head>
+    <body>
+	<div>
+	<a href='/sightings1/statistics/' class=''>
+        <center>
+        <button type="button" class='button'>See fun stats of squirrels!</button>
+    	</center>
+  	</a>
+	<a href='/sightings1/squirreladd/' class=''>
+        <center>
+        <button type="button" class='button'>Create a new sighting!</button>
+        </center>
+        </a>
+	<a href='/map/' class=''>
+        <center>
+        <button type="button" class='button'>Go to the squirrel map!</button>
+        </center>
+        </a>
+
+	</div>
+
+	<div>
+	    <ul>
+	    {% for squirrel in squirrels %}
+	    <li>
+		   
+		    <a href='{{ squirrel.Unique_squirrel_id}}'>{{ squirrel.Unique_squirrel_id }}</a>
+		    
+	    </li>
+	    {% endfor %}
+            </ul>
+	</div>
+    </body>
+</html>
